@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="titulo">
+            <h1> Cadastro Clientes </h1>
+        </div>
+        <form method="post" action="bd/envio.php" id="contato" autocomplete="off">
+            <fieldset>
+                <legend>Formulário</legend>
+                <div>
+                    <label for="txtNome"> Nome Completo: </label>
+                    <input type="text" id="txtNome" name="txtNome" maxlength="50" placeholder="João das 
+Neves" required />
+                </div>
+                <div>
+                    <label for="txtCPF"> CPF: </label>
+                    <input type="text" id="txtCPF" name="txtCPF" maxlength="14" placeholder="000.000.000-00" required />
+                </div>
+                <div>
+                    <label for="txtNasc">Data de Nascimento:</label><br>
+                    <input type="date" id="txtNasc" name="txtNasc" max="2020-12-31" min="1900-01-01" required />
+                </div>
+                <div>
+                    <label for="txtEmail "> E-mail: </label>
+                    <input type="email" id="txtEmail" name="txtEmail" placeholder="exemplo@exemplo.com" required />
+                </div>
+                <br>
+                <div>
+                    <button type="submit" name="btnEnviar">Enviar</button>
+                    <button type="reset" name="btnLimpar">Limpar</button>
+                </div>
+                <br>
+            </fieldset>
+        </form>
+
+
+        <!--FORMULÁRIO DE LISTAGEM-->
+        <form method="post" action="bd/envio.php" id="pesquisa" autocomplete="off">
+            <fieldset>
+                <legend>Pesquisa de Cliente</legend>
+                <br>
+                <span>
+                    <label for="txtNomePesquisa">Nome: </label>
+                    <input type="text" id="txtNomePesquisa" name="txtNomePesquisa" placeholder="João das Neves" />
+                </span>
+                <span>
+                    <button type="submit" name="btnListar">Listar</button>
+                </span>
+            </fieldset>
+        </form>
+
+        <!--FORMULÁRIO DE LISTAGEM-->
+        <form method="post" action="bd/envio.php" id="pesquisaVendas" autocomplete="off">
+            <fieldset>
+                <legend>Relatório de Vendas</legend>
+                <br>
+                <span>
+                    <label for="txtDataInicial">Data Inicial: </label>
+                    <input type="date" id="txtDataInicial" name="txtDataInicial" />
+                </span>
+                <span>
+                    <label for="txtDataFinal">Data Final: </label>
+                    <input type="date" id="txtDataFinal" name="txtDataFinal" />
+                </span>
+                <span>
+                    <button type="submit" name="btnListarVendas">Listar Vendas</button>
+                </span>
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+
+</html>
