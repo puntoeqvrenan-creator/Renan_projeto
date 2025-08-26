@@ -1,0 +1,19 @@
+body {
+    background-color: darkcyan;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 60%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: LightSteelBlue;
+    padding-bottom: 1%;
+    border: 2px solid steelblue;
+}
+
+#titulo {
+    padding-top: 2%;
+    text-align: center;
+}
